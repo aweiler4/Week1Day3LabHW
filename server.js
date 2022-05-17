@@ -4,6 +4,10 @@ const app = express();
 app.get('/greeting', (req, res) => {
     res.send(`What's up? It's so great to see you!`)
 })
+app.get('/greeting/:name', (req, res) => {
+    res.send(`Wow! Hello there, ${req.params.name}!`)
+})
+
 
 
 
